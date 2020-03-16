@@ -1,9 +1,12 @@
 //1. Given two numbers, write a function that will return  the larger number
 
 function largerNum(num1, num2) {
-    // you code here
+    if (num1 > num2) {
+        return num1}
+        else {
+        return num2}
+    }
 
-}
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
 // Example: 
@@ -14,9 +17,19 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
-
+    if ((score / possible) >= 0.9) {
+        return "A"}
+        if ((score / possible) >= 0.8) {
+            return "B"}
+            if ((score / possible) >= 0.7) {
+                return "C"}
+                if ((score / possible) >= 0.6) {
+                    return "D"}
+                    if ((score / possible) >= 0.5) {
+                        return "F"}
 }
 
+testGrader(49, 100)
 
 // --------------------------------------------
 
@@ -29,13 +42,28 @@ function testGrader(score, possible) {
 //Make sure your ranges are inclusive
 
 function timeOfDayGreeting(hour) {
-    // you code below
+    if ((hour >= 5) && (hour <= 11)) {
+        return "good morning"}
+        if ((hour >= 12) && (hour <= 17)) {
+            return "good afternoon"}
+             if ((hour >= 18) && (hour <= 21)) {
+                 return "good evening"}
+                 if ((hour >= 22) || (hour <= 4)) {
+                     return "good night"}
 
-}
+
+ }
+
+ timeOfDayGreeting(6)
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
-
+if (temp >= 103) {
+    return "fever go to hospital"}
+    if (temp > 98.6) {
+        return "fever"}
+        if (temp <= 98.6) {
+            return "no fever"}
 }
 
 //5. Write a function that takes in a car object, if it is not moving then return true
@@ -47,7 +75,9 @@ let myCar = {
 }
 
 function isStopped(car) {
-
+    if (car.moving == false) {
+        return true}
+        if (car.moving != false) {return false}
 }
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
@@ -58,5 +88,8 @@ let dish = {
 }
 
 function washDish(dish) {
-
-}
+    if ((dish.isDirty == true) && (dish.yourDish == true)) {
+        return true}
+    if ((dish != true) || (isDirty != true)) {
+        return false}
+    }
